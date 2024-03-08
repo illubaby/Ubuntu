@@ -57,7 +57,7 @@ show-battery-percentage=true
 text-scaling-factor=1.3999999999999999
 
 [desktop/notifications]
-application-children=['update-manager', 'snap-store-ubuntu-software', 'firefox-firefox', 'gitkraken-gitkraken', 'org-gnome-gedit', 'gnome-control-center']
+application-children=['update-manager', 'snap-store-ubuntu-software', 'firefox-firefox', 'gitkraken-gitkraken', 'org-gnome-gedit', 'gnome-control-center', 'org-gnome-nautilus', 'org-gnome-shell-portalhelper', 'org-gnome-software']
 
 [desktop/notifications/application/firefox-firefox]
 application-id='firefox_firefox.desktop'
@@ -70,6 +70,15 @@ application-id='gnome-control-center.desktop'
 
 [desktop/notifications/application/org-gnome-gedit]
 application-id='org.gnome.gedit.desktop'
+
+[desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[desktop/notifications/application/org-gnome-shell-portalhelper]
+application-id='org.gnome.Shell.PortalHelper.desktop'
+
+[desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
 
 [desktop/notifications/application/snap-store-ubuntu-software]
 application-id='snap-store_ubuntu-software.desktop'
@@ -121,7 +130,7 @@ active-plugins=['spell', 'docinfo', 'filebrowser', 'openlinks', 'sort', 'modelin
 [gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/illubaby'
+virtual-root='file:///home/illubaby/RISC-V'
 
 [gedit/preferences/editor]
 scheme='Yaru-dark'
@@ -170,17 +179,23 @@ night-light-temperature=uint32 3248
 
 [settings-daemon/plugins/media-keys]
 control-center=['<Super>i']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 home=['<Super>e']
-search=['<Primary>f']
 terminal=['<Primary>t']
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>v'
+command='copyq toggle'
+name='Open clipboard'
 
 [settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=3600
 sleep-inactive-ac-type='nothing'
 
 [shell]
-app-picker-layout=[{'org.gnome.Software.desktop': <{'position': <0>}>, 'software-properties-drivers.desktop': <{'position': <1>}>, 'gnome-control-center.desktop': <{'position': <2>}>, 'org.gnome.Calendar.desktop': <{'position': <3>}>, 'chrome-agimnkijcaahngcdmfeangaknmldooml-Default.desktop': <{'position': <4>}>, 'gnome-language-selector.desktop': <{'position': <5>}>, 'org.gnome.Totem.desktop': <{'position': <6>}>, 'libreoffice-startcenter.desktop': <{'position': <7>}>, 'org.gnome.Calculator.desktop': <{'position': <8>}>, 'org.gnome.gedit.desktop': <{'position': <9>}>, 'libreoffice-calc.desktop': <{'position': <10>}>, 'simple-scan.desktop': <{'position': <11>}>, 'libreoffice-draw.desktop': <{'position': <12>}>, 'gnome-system-monitor.desktop': <{'position': <13>}>, 'libreoffice-impress.desktop': <{'position': <14>}>, 'libreoffice-math.desktop': <{'position': <15>}>, 'Utilities': <{'position': <16>}>, 'nvidia-settings.desktop': <{'position': <17>}>, 'org.gnome.Cheese.desktop': <{'position': <18>}>, 'org.gnome.PowerStats.desktop': <{'position': <19>}>, 'org.remmina.Remmina.desktop': <{'position': <20>}>, 'shotwell.desktop': <{'position': <21>}>, 'gtkwave.desktop': <{'position': <22>}>, 'rhythmbox.desktop': <{'position': <23>}>}, {'software-properties-gtk.desktop': <{'position': <0>}>, 'update-manager.desktop': <{'position': <1>}>, 'gnome-session-properties.desktop': <{'position': <2>}>, 'usb-creator-gtk.desktop': <{'position': <3>}>, 'org.gnome.Todo.desktop': <{'position': <4>}>, 'transmission-gtk.desktop': <{'position': <5>}>, 'yelp.desktop': <{'position': <6>}>, 'libreoffice-writer.desktop': <{'position': <7>}>, 'thunderbird.desktop': <{'position': <8>}>}]
-favorite-apps=['google-chrome.desktop', 'microsoft-edge.desktop', 'code.desktop', 'org.gnome.Terminal.desktop', 'gitkraken_gitkraken.desktop', 'org.gnome.Nautilus.desktop', 'snap-store_ubuntu-software.desktop']
+app-picker-layout=[{'org.gnome.Software.desktop': <{'position': <0>}>, 'software-properties-drivers.desktop': <{'position': <1>}>, 'gnome-control-center.desktop': <{'position': <2>}>, 'org.gnome.Calendar.desktop': <{'position': <3>}>, 'chrome-agimnkijcaahngcdmfeangaknmldooml-Default.desktop': <{'position': <4>}>, 'gnome-language-selector.desktop': <{'position': <5>}>, 'org.gnome.Totem.desktop': <{'position': <6>}>, 'libreoffice-startcenter.desktop': <{'position': <7>}>, 'org.gnome.Calculator.desktop': <{'position': <8>}>, 'org.gnome.gedit.desktop': <{'position': <9>}>, 'libreoffice-calc.desktop': <{'position': <10>}>, 'simple-scan.desktop': <{'position': <11>}>, 'libreoffice-draw.desktop': <{'position': <12>}>, 'gnome-system-monitor.desktop': <{'position': <13>}>, 'libreoffice-impress.desktop': <{'position': <14>}>, 'libreoffice-math.desktop': <{'position': <15>}>, 'Utilities': <{'position': <16>}>, 'nvidia-settings.desktop': <{'position': <17>}>, 'org.gnome.Cheese.desktop': <{'position': <18>}>, 'org.gnome.PowerStats.desktop': <{'position': <19>}>, 'org.remmina.Remmina.desktop': <{'position': <20>}>, 'shotwell.desktop': <{'position': <21>}>, 'gtkwave.desktop': <{'position': <22>}>, 'rhythmbox.desktop': <{'position': <23>}>}, {'software-properties-gtk.desktop': <{'position': <0>}>, 'update-manager.desktop': <{'position': <1>}>, 'gnome-session-properties.desktop': <{'position': <2>}>, 'usb-creator-gtk.desktop': <{'position': <3>}>, 'org.gnome.Todo.desktop': <{'position': <4>}>, 'transmission-gtk.desktop': <{'position': <5>}>, 'yelp.desktop': <{'position': <6>}>, 'libreoffice-writer.desktop': <{'position': <7>}>, 'thunderbird.desktop': <{'position': <8>}>, 'gparted.desktop': <{'position': <9>}>}]
+command-history=['gnome-session-properties', 'nano ~/.bashrc']
+favorite-apps=['google-chrome.desktop', 'microsoft-edge.desktop', 'code.desktop', 'org.gnome.Terminal.desktop', 'gitkraken_gitkraken.desktop', 'org.gnome.Nautilus.desktop', 'snap-store_ubuntu-software.desktop', 'chrome-agimnkijcaahngcdmfeangaknmldooml-Default.desktop']
 welcome-dialog-last-shown-version='42.9'
 
 [shell/extensions/dash-to-dock]
@@ -196,10 +211,12 @@ show-home=false
 
 [shell/keybindings]
 show-screenshot-ui=['<Shift><Super>s']
+toggle-message-tray=['<Primary>n']
 
 [software]
-check-timestamp=int64 1709887620
-update-notification-timestamp=int64 1709887621
+check-timestamp=int64 1709894325
+install-timestamp=int64 1709916204
+update-notification-timestamp=int64 1709894322
 
 [system/location]
 enabled=false

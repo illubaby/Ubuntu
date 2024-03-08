@@ -9,7 +9,8 @@
 # sudo apt install gnome-tweaks
 # sudo apt-get install git
 # sudo apt install gcc
-sudo apt install gnome-software
+#sudo apt install gnome-software
+
 # Setting
 #gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 #wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1Lx1qBLfHpWyRCg_fA3fXTRLLrTsWAOTC' -O ~/Pictures/background.jpg
@@ -18,5 +19,5 @@ sudo apt install gnome-software
 #gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts false
 #gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'RIGHT'
 #gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+sudo sh -c "echo 80 > /sys/class/power_supply/BAT1/charge_control_end_threshold"
 
-sudo apt install gnome-software
